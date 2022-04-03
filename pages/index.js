@@ -32,7 +32,7 @@ export default function Home({ myrepos, myaccount}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Avery's Portfolio</title>
+        <title>Avery&#39;s Portfolio</title>
       </Head>
       
       <main>
@@ -57,7 +57,7 @@ export default function Home({ myrepos, myaccount}) {
         { showmain ? (
           <div className="main">
             <h1>Hi there! I am Avery Smith :)</h1>
-            <p>I am a computer science student who will be attending stevens institute of technology next fall. (SAAS class of 22)</p>
+            <p>I am a computer science student who will be attending stevens institute of technology next fall. (SAAS class of &#39;22)</p>
           </div>
         ) : null }
 
