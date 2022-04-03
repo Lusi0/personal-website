@@ -65,7 +65,7 @@ export default function Home({ myrepos, myaccount}) {
         {showrepos ? 
             <div className="repoholder">
                 { myrepos.map(repo => (
-                    <div className="repo">
+                    <div key={repo.name} className="repo">
                         <a href={repo.html_url} >{repo.name}</a>
                     </div>
                 ))}
