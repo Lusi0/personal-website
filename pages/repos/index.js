@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Navbar from '../../componets/navbar'
 
 
-export default function Repos({ myrepos, reposdata}) {
+export default function Repos({ myrepos, myaccount}) {
   return (
     <div>
       <Head>
@@ -12,7 +12,7 @@ export default function Repos({ myrepos, reposdata}) {
       
       <main>
         {/* navbar */}
-        <Navbar repos="23"/>
+        <Navbar therepos={myaccount.public_repos}/>
 
         {/* repos */}
         <div class='repoholder'>
@@ -32,13 +32,15 @@ export default function Repos({ myrepos, reposdata}) {
 export async function getServerSideProps() {
   
     const req = await fetch(`https://api.github.com/users/lusi0/repos`);
+    const req2 = await fetch(`https://api.github.com/users/lusi0`); 
 
-    const data = await req.json();
-    const datalength =  Object.keys(data).length.toString();
+    const therepos = await req.json();
+
+    const accountdata = await req2.json();
     
      return {
-         props: { myrepos: data,
-            reposdata : datalength },
+         props: { myrepos: therepos,
+            myaccount : accountdata },
          
     }
   }
