@@ -82,7 +82,7 @@ export default function Home({ myrepos, myaccount}) {
                 { myrepos.map(repo => (
                     <div key={repo.name} className="repo">
                       {/* open in new page */}
-                        <a href={repo.html_url} target="_blank" >{repo.name}</a>
+                        <a href={repo.html_url} rel="noreferrer" target="_blank" >{repo.name}</a>
                     </div>
                 ))}
             </div>
