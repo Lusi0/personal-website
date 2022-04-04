@@ -136,7 +136,9 @@ export async function getServerSideProps() {
   
   const req = await fetch(`https://api.github.com/users/lusi0/repos`);
   const req2 = await fetch(`https://api.github.com/users/lusi0`); 
-  const req3 = await fetch(`http://localhost:3000/api/accounts`);
+  // get api/accounts
+  const req3 = await fetch (`http://averysmith.top/api/accounts`);
+  
 
   const therepos = await req.json();
 
