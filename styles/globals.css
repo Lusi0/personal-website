@@ -72,10 +72,16 @@ a {
 
 .icons {
   /* make photo grayscale */
-  filter: grayscale(100%);
-  /* background-color: #512D6D; */
-  /* blend mode */
-  mix-blend-mode: multiply;
+ 
+  
+  
+  
+  
+  /* 100% contrast */
+  
+  
+  
+  
 }
 
 /* link hover */
