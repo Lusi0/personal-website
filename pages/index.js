@@ -104,7 +104,7 @@ export default function Home({ myrepos, myaccount, accounts, accountslen}) {
                         <div  className="repo">
                         {/* get the favicon from the link */}
                         
-                          <Image alt='link image' src={"http://www.google.com/s2/favicons?domain={}".replace("{}", account.link)} width={50} height={50} />
+                          <Image alt='link image' className='icons' src={"http://www.google.com/s2/favicons?sz=64&domain={}".replace("{}", account.link)} width={50} height={50} />
                           <div className='accountname' >{account.title}</div>
                           
                         </div>
