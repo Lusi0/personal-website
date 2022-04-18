@@ -159,6 +159,11 @@ export async function getServerSideProps() {
   
   const blogdata = await req4.json();
 
+  // reverse the order of the blog data
+  const reversedblogdata = blogdata.reverse();
+
+
+
   const bloglength = blogdata.length;
 
 console.log(therepos);
@@ -170,7 +175,7 @@ console.log(therepos);
           myaccount : accountdata,
           accounts : allaccounts,
           accountslen: accountslength,
-          blogdata: blogdata,
+          blogdata: reversedblogdata,
           bloglength: bloglength},
        
   }
