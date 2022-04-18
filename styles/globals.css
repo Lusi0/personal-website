@@ -44,6 +44,8 @@ input.btn {
   cursor: pointer;
 }
 
+
+
 .navbar-container {
   /* center */
   display: flex;
@@ -77,6 +79,52 @@ input.btn {
   border-style: none;
 
 }
+
+.blog-post{
+  /* width 33% */
+  width: 33%;
+  /* margin-left: 33%; */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.blog-title{
+  color: #512D6D;
+  /* center text */
+  text-align: center;
+}
+
+.blog-button{
+  /* center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+hr{
+  /* width 100% */
+  width: 70%;
+  /* center content */
+  margin-left: auto;
+  margin-right: auto;
+  /* height 1px */
+  /* thinkness */
+  border-width: 3px;
+  /* color #512D6D */
+  color: #512D6D;
+  /* margin-top 1em */
+  margin-top: 1em;
+  /* margin-bottom 1em */
+  margin-bottom: 1em;
+}
+
+.blog-content{
+  color: #512D6D;
+}
+
 
 .repoWrapper {
   /* inline */

@@ -123,6 +123,7 @@ export default function Home({ myrepos, myaccount, accounts, accountslen, blogda
                 { blogdata.map(blog => (
                     <div key={blog.id} className="blogWrapper">
                       <BlogPost title={blog.title} content={blog.body} link={blog.link} />
+                      <hr></hr>
                     </div>
                   ))}
             </div>
@@ -145,7 +146,7 @@ export async function getServerSideProps() {
   const req2 = await fetch(`https://api.github.com/users/lusi0`); 
   // get api/accounts
   const req3 = await fetch (`http://averysmith.top/api/accounts`);
-  const req4 = await fetch (`http://averysmith.top/api/blog`);
+  const req4 = await fetch (`http://averysmith.top/api/getblog`);
   
 
   const therepos = await req.json();
