@@ -22,6 +22,28 @@ a {
   margin-bottom: 0.5em;
 }
 
+.form-group {
+  margin-bottom: 0.5em;
+  /* center content*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* good forum button */
+input.btn {
+  background-color: #512D6D;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .navbar-container {
   /* center */
   display: flex;

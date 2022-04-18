@@ -3,11 +3,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+// import blog post component
+import BlogPost from '../componets/blogPost'
 
 
 
 // 
-export default function Home({ myrepos, myaccount, accounts, accountslen}) {
+export default function Home({ myrepos, myaccount, accounts, accountslen, blogdata, bloglength }) {
 
   // states to show and hide the repoholder
   const [showmain, setshowmain] = useState(true);
@@ -61,7 +63,7 @@ export default function Home({ myrepos, myaccount, accounts, accountslen}) {
                     <button className="link" onClick={() => toggleContent('repos')}>{myaccount.public_repos} Reposotories</button>
 
                     <button className="link" onClick={() => toggleContent('accounts')} >{accountslen} Accounts</button>
-                    <button className="link" onClick={() => toggleContent('blog')}> Cool Plog Posts</button>
+                    <button className="link" onClick={() => toggleContent('blog')}>{bloglength} Cool Plog Posts</button>
                     
 
                 </div>
@@ -118,6 +120,11 @@ export default function Home({ myrepos, myaccount, accounts, accountslen}) {
         {/* if showblog is true then display blog */}
         {showblog ?
             <div className="blog">
+                { blogdata.map(blog => (
+                    <div key={blog.id} className="blogWrapper">
+                      <BlogPost title={blog.title} content={blog.body} link={blog.link} />
+                    </div>
+                  ))}
             </div>
         : null}
 
@@ -138,6 +145,7 @@ export async function getServerSideProps() {
   const req2 = await fetch(`https://api.github.com/users/lusi0`); 
   // get api/accounts
   const req3 = await fetch (`http://averysmith.top/api/accounts`);
+  const req4 = await fetch (`http://averysmith.top/api/blog`);
   
 
   const therepos = await req.json();
@@ -148,6 +156,9 @@ export async function getServerSideProps() {
 
   const accountslength = allaccounts.length;
   
+  const blogdata = await req4.json();
+
+  const bloglength = blogdata.length;
 
 console.log(therepos);
 
@@ -157,7 +168,9 @@ console.log(therepos);
        props: { myrepos: therepos,
           myaccount : accountdata,
           accounts : allaccounts,
-          accountslen: accountslength},
+          accountslen: accountslength,
+          blogdata: blogdata,
+          bloglength: bloglength},
        
   }
 }

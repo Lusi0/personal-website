@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "faunadb": "^4.5.4",
     "lodash": "^4.17.21",
     "next": "12.1.4",
     "react": "18.0.0",
