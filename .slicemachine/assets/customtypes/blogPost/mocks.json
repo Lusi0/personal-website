@@ -1,0 +1,26 @@
+{
+  "id": "230e3ff2-4e9f-4338-a9a2-558d61f9606c",
+  "uid": "earum-quas-nulla",
+  "type": "blogPost",
+  "data": {
+    "upload-time": "2020-12-12T21:05:24.409Z",
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Monetize 24/7 infrastructures",
+        "spans": []
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Id tempor minim voluptate fugiat mollit mollit.",
+        "spans": []
+      }
+    ],
+    "link": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    }
+  }
+}

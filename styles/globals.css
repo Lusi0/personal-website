@@ -92,7 +92,7 @@ input.btn {
 .blog-title{
   color: #512D6D;
   /* center text */
-  text-align: center;
+  text-align: left;
 }
 
 .blog-button{
@@ -195,11 +195,19 @@ hr{
 
 .description{
   font-size: 1.5em;
+  /* space bottom */
+  margin-bottom: 2em;
+
   color: #512D6D;
   /* no outline */
   border-style: none;
   /* center */
   text-align: center;
+}
+
+.decription-link{
+  /* underline */
+  text-decoration: underline;
 }
 
 
