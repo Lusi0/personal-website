@@ -152,7 +152,7 @@ export async function getServerSideProps() {
   const req = await fetch(`https://api.github.com/users/lusi0/repos`);
   const req2 = await fetch(`https://api.github.com/users/lusi0`); 
   // get api/accounts
-  const req3 = await fetch (`http://localhost:3000/api/accounts`);
+  const req3 = await fetch (`https://averysmith.vercel.app/api/accounts`);
 
   const key = `$2b$10$TIE1jwX/8BMw/0uwrzNAc.BcTznqcAH7.aHXj6d5p84g3bxfhmA82`
   const options = {
